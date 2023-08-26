@@ -1,0 +1,19 @@
+<!-- src/app/product-list/product-list.component.html -->
+<div class="container">
+  <h1>Product Listing</h1>
+
+  <input
+    type="text"
+    placeholder="Search by product name..."
+    [(ngModel)]="searchTerm"
+  />
+
+  <div class="product-card" *ngFor="let product of products | filter: searchTerm">
+    <a [routerLink]="['/products', product.id]">
+      <!-- Wrap the entire card content with <a> -->
+      <img [src]="product.image" alt="{{ product.title }}" />
+      <h2>{{ product.title }}</h2>
+      <p>Price: ${{ product.price }}</p>
+    </a>
+  </div>
+</div>
