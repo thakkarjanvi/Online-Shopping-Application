@@ -1,6 +1,10 @@
 import { Component, OnInit  } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../Service/product.service';
+import { CartService } from '../Service/cart.service';
+import { Product } from '../Model/product.model';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-product-details',
@@ -12,7 +16,9 @@ export class ProductDetailsComponent implements OnInit{
 
   constructor(
     private route: ActivatedRoute,
-    private productService: ProductService
+    private productService: ProductService,
+    private cartService: CartService,
+    private router: Router // Inject the Router
   ) {}
 
   ngOnInit(): void {
@@ -26,7 +32,19 @@ export class ProductDetailsComponent implements OnInit{
     });
   }
 
-  buyNow() {
-    
+  buyNow(): void{
+    if (this.product) {
+      this.cartService.addToCart(this.product);
+    }
   }
+
+  redirectToCart() {
+    // Implement the 'Buy Now' functionality here (e.g., add to cart)
+    this.cartService.addToCart(this.product);
+
+    // Redirect to the cart page
+    this.router.navigate(['/cart']);
+  }
+
+  
 }

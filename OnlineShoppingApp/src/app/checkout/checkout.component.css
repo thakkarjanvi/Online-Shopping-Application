@@ -1,0 +1,54 @@
+/* checkout.component.css */
+
+/* Container styling */
+.container {
+    max-width: 400px; /* Adjust the maximum width as needed */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading styling */
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Form group styling */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Label styling */
+  label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  /* Input field styling */
+  input[type="text"] {
+    width: 100%;
+    padding: 8px; /* Reduce padding to make the form smaller */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Button styling */
+  button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px; /* Reduce padding to make the button smaller */
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  

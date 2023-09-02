@@ -15,6 +15,8 @@ import { UserRegistrationComponent } from './user-registration/user-registration
 import { UserLoginComponent } from './user-login/user-login.component';
 import { HomeComponent } from './home/home.component';
 import { FilterPipe } from './filter.pipe'; 
+import { CartService } from './Service/cart.service';
+import { OrderService } from './Service/order.service';
 
 const routes: Routes = [
   { path: '', redirectTo: '/products', pathMatch: 'full' },
@@ -49,7 +51,7 @@ const routes: Routes = [
     HttpClientModule
   ],
   exports: [RouterModule],
-  providers: [],
+  providers: [CartService,OrderService],
   bootstrap: [AppComponent]
 })
 

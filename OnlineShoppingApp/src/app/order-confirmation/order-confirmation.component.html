@@ -1,1 +1,19 @@
 <p>order-confirmation works!</p>
+
+<!-- order-confirmation.component.html -->
+<div class="container">
+    <h1>Order Confirmation</h1>
+  
+    <!-- Display order details -->
+    <div class="order-summary">
+      <h2>Order Summary</h2>
+      <p><strong>Name:</strong> {{ orderInfo.name }}</p>
+      <p><strong>Address:</strong> {{ orderInfo.address }}</p>
+      <p><strong>Total Amount:</strong> ${{ orderInfo.totalAmount }}</p>
+      <!-- Add more order details here as needed -->
+    </div>
+  
+    <!-- Display a thank you message -->
+    <p class="thank-you">Thank you for your order!</p>
+  </div>
+  

@@ -1,3 +1,4 @@
+<p>product-list works!</p>
 <!-- src/app/product-list/product-list.component.html -->
 <div class="container">
   <h1>Product Listing</h1>
@@ -10,10 +11,13 @@
 
   <div class="product-card" *ngFor="let product of products | filter: searchTerm">
     <a [routerLink]="['/products', product.id]">
+      <!-- <a [routerLink]="['/cart']" (click)="addToCart(product)">Add to Cart</a> -->
       <!-- Wrap the entire card content with <a> -->
       <img [src]="product.image" alt="{{ product.title }}" />
       <h2>{{ product.title }}</h2>
       <p>Price: ${{ product.price }}</p>
+      <button (click)="product(product)">Product Details</button> <br><br>
+      <button (click)="addToCart(product)">Add to Cart</button> 
     </a>
   </div>
 </div>
